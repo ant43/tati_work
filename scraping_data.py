@@ -45,6 +45,10 @@ def _process_list(list):
         stock = stock + "|" + i
     return stock[3 :]
 
+number = 32360
+while(len(stock) != number):
+    del stock_tickers[0]
+
 how_many = len(stock_tickers)
 while(not get_data_about_stock( year = 2022 ,ticker = _process_list(stock_tickers), csv_file_name = 'allTheFiles', month = 8, day = 4,   time = 86400 )):
     print(len(stock_tickers))
